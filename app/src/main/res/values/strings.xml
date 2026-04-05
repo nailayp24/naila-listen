@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">naila-listen</string>
+
+    <string name="welcome_title">Welcome Back 👋</string>
+    <string name="login_desc">Today is a new day. It\'s your day. You shape it. Sign in to start managing your projects.</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="hint_username">Input your username</string>
+    <string name="hint_password">At least 8 characters</string>
+    <string name="btn_login">Sign in</string>
+    <string name="or_sign_in">Or sign in with</string>
+    <string name="no_account">Don\'t have an account? Sign up</string>
+
+    <string name="login_success">Login Berhasil! 🎉</string>
+    <string name="success_desc">Selamat datang kembali di naila-listen. Kamu sudah bisa mulai mengelola project kamu sekarang.</string>
 </resources>

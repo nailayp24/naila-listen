@@ -12,14 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nailalisten">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".pertemuan_3.ThirdActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <activity
+            android:name=".pertemuan_3.ThirdResultActivity"
+            android:exported="false" />
+        <activity
+        android:name=".pertemuan_2.SecondActivity"
+        android:exported="false" />
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false"/>
+
+
+    </application>
 </manifest>

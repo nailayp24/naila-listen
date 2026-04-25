@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="@color/figma_orange"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BookVibes"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp"/>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:background="#80FFFFFF"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect your digital\nlibrary accounts for a\nseamless integration."
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="48dp"/>
+
+    <Button
+        android:id="@+id/btnMenuRumus"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Bangun Ruang"
+        android:textColor="@color/figma_orange"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnMenuCustom1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Your Shelf"
+        android:textColor="@color/figma_orange"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnMenuCustom2"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Trending Books"
+        android:textColor="@color/figma_orange"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btnMenuLogout"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>

@@ -11,9 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nailalisten">
+
         <activity
             android:name=".pertemuan_3.ThirdActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -21,15 +22,25 @@
         </activity>
 
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".pertemuan_2.SecondActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".pertemuan_4.CustomSatuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".pertemuan_4.CustomDuaActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".pertemuan_3.ThirdResultActivity"
             android:exported="false" />
-        <activity
-        android:name=".pertemuan_2.SecondActivity"
-        android:exported="false" />
-        <activity
-            android:name=".SecondActivity"
-            android:exported="false"/>
-
 
     </application>
+
 </manifest>

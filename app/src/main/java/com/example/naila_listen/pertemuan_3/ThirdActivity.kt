@@ -18,18 +18,20 @@ class ThirdActivity : AppCompatActivity() {
         binding = ActivityThirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Logika klik tombol Sign In
+        // Logika klik tombol Sign In (Login)
         binding.btnKirim.setOnClickListener {
-            // Kita ambil dari etUsername karena tadi sudah kita ganti dari Email ke Username
             val username = binding.etUsername.text.toString()
             val pass = binding.etPassword.text.toString()
 
             if (username.isNotEmpty() && pass.isNotEmpty()) {
-                Toast.makeText(this, "Login berhasil untuk: $username", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login berhasil, selamat datang $username!", Toast.LENGTH_SHORT).show()
 
-                // Intent pindah ke halaman sukses
-                val intent = Intent(this, ThirdResultActivity::class.java)
+                // UBAH DISINI: Arahkan ke MainActivity (Dashboard), bukan ThirdResultActivity
+                val intent = Intent(this, com.example.naila_listen.MainActivity::class.java)
                 startActivity(intent)
+
+                // Tambahkan finish() agar user tidak bisa kembali ke login saat menekan tombol back
+                finish()
             } else {
                 Toast.makeText(this, "Username dan Password jangan dikosongin ya!", Toast.LENGTH_SHORT).show()
             }

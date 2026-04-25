@@ -5,4 +5,8 @@
     <color name="primary_dark">#12232E</color>
     <color name="gray_input">#F1F4F9</color>
     <color name="blue_link">#3D84F6</color>
+
+    <color name="figma_orange">#F08C1D</color>
+    <color name="figma_text_gray">#555555</color>
+    <color name="figma_bg_light">#FAFAFA</color>
 </resources>

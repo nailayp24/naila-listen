@@ -2,11 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary_dark">#12232E</color>
-    <color name="gray_input">#F1F4F9</color>
-    <color name="blue_link">#3D84F6</color>
 
-    <color name="figma_orange">#F08C1D</color>
+    <color name="primary_sigana">#E53935</color>
+    <color name="sigana_red">#E53935</color> <color name="secondary_sigana">#FB8C00</color>
+    <color name="sigana_dark">#B71C1C</color>
+    <color name="primary_dark">#B71C1C</color> <color name="gray_input">#F1F4F9</color>
     <color name="figma_text_gray">#555555</color>
     <color name="figma_bg_light">#FAFAFA</color>
+    <color name="figma_orange">#F08C1D</color>
 </resources>

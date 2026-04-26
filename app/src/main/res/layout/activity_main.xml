@@ -45,7 +45,7 @@
         android:id="@+id/btnMenuCustom1"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Your Shelf"
+        android:text="Web View Bina Desa"
         android:textColor="@color/figma_orange"
         android:backgroundTint="@color/white"
         android:layout_marginBottom="16dp"/>

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FB8C00"
-    tools:context=".pertemuan_6.SplashScreenActivity">
+    tools:context=".Home.pertemuan_6.SplashScreenActivity">
 
     <ImageView
         android:id="@+id/ivLogoSplash"

@@ -10,4 +10,5 @@
     <color name="figma_text_gray">#555555</color>
     <color name="figma_bg_light">#FAFAFA</color>
     <color name="figma_orange">#F08C1D</color>
+    <color name="colorPrimaryVariant">#D4431B</color>
 </resources>

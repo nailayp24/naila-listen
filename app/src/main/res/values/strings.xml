@@ -13,4 +13,6 @@
 
     <string name="login_success">Login Berhasil! 🎉</string>
     <string name="success_desc">Selamat datang kembali di naila-listen. Kamu sudah bisa mulai mengelola project kamu sekarang.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

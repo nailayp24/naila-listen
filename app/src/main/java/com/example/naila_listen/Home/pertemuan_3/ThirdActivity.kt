@@ -1,9 +1,10 @@
-package com.example.naila_listen.pertemuan_3
+package com.example.naila_listen.Home.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.naila_listen.MainActivity
 import com.example.naila_listen.databinding.ActivityThirdBinding
 
 class ThirdActivity : AppCompatActivity() {
@@ -28,7 +29,7 @@ class ThirdActivity : AppCompatActivity() {
                 editor.apply()
 
                 Toast.makeText(this, "Login Berhasil, Selamat Bertugas!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, com.example.naila_listen.MainActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             } else {
                 Toast.makeText(this, "Username dan Password salah!", Toast.LENGTH_SHORT).show()

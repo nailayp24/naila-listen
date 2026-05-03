@@ -14,33 +14,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nailalisten"
         android:usesCleartextTraffic="true">
-
         <activity
-            android:name=".pertemuan_6.SplashScreenActivity"
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_6.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".pertemuan_6.WebViewActivity"
+            android:name=".Home.pertemuan_6.WebViewActivity"
             android:exported="false" />
-
         <activity
-            android:name=".pertemuan_3.ThirdActivity"
+            android:name=".Home.pertemuan_3.ThirdActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
-        <activity android:name=".pertemuan_2.SecondActivity" android:exported="false" />
-        <activity android:name=".pertemuan_3.ThirdResultActivity" android:exported="false" />
-        <activity android:name=".pertemuan_4.CustomSatuActivity" android:exported="false" />
-        <activity android:name=".pertemuan_4.CustomDuaActivity" android:exported="false" />
-
+        <activity
+            android:name=".Home.pertemuan_2.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_3.ThirdResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_4.CustomSatuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_4.CustomDuaActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

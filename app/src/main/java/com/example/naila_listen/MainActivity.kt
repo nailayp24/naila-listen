@@ -5,11 +5,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import com.example.naila_listen.databinding.ActivityMainBinding
-import com.example.naila_listen.pertemuan_2.SecondActivity
-import com.example.naila_listen.pertemuan_3.ThirdActivity
-import com.example.naila_listen.pertemuan_6.WebViewActivity
+import com.example.naila_listen.Home.pertemuan_2.SecondActivity
+import com.example.naila_listen.Home.pertemuan_3.ThirdActivity
+import com.example.naila_listen.Home.pertemuan_6.WebViewActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

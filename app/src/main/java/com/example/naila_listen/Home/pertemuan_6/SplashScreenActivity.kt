@@ -1,12 +1,13 @@
-package com.example.naila_listen.pertemuan_6
+package com.example.naila_listen.Home.pertemuan_6
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.naila_listen.BaseActivity
 import com.example.naila_listen.MainActivity
 import com.example.naila_listen.R
-import com.example.naila_listen.pertemuan_3.ThirdActivity
+import com.example.naila_listen.Home.pertemuan_3.ThirdActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -24,7 +25,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
             // Alur: Jika sudah login ke Main, jika belum ke Auth (ThirdActivity)
             val intent = if (isLogin) {
-                Intent(this@SplashScreenActivity, MainActivity::class.java)
+                Intent(this@SplashScreenActivity, BaseActivity::class.java)
             } else {
                 Intent(this@SplashScreenActivity, ThirdActivity::class.java)
             }

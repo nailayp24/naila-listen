@@ -1,52 +1,41 @@
 package com.example.naila_listen
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.edit
-import com.example.naila_listen.databinding.ActivityMainBinding
-import com.example.naila_listen.Home.pertemuan_2.SecondActivity
-import com.example.naila_listen.Home.pertemuan_3.ThirdActivity
-import com.example.naila_listen.Home.pertemuan_6.WebViewActivity
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import androidx.fragment.app.Fragment
+import com.example.naila_listen.Home.HomeFragment
+import com.example.naila_listen.About.AboutFragment
+import com.example.naila_listen.Profile.ProfileFragment
+import com.example.naila_listen.More.MoreFragment // 1. Tambahkan import ini
+import com.example.naila_listen.databinding.ActivityBaseBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityBaseBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
-
-        // 1. Tombol Kalkulator (P2)
-        binding.btnMenuRumus.setOnClickListener {
-            startActivity(Intent(this, SecondActivity::class.java))
+        if (savedInstanceState == null) {
+            replaceFragment(HomeFragment())
         }
 
-        // 2. Tombol Portal Web SIGANA (P5/P6 WebView)
-        binding.btnMenuCustom1.setOnClickListener {
-            startActivity(Intent(this, WebViewActivity::class.java))
+        binding.bottomNavView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> replaceFragment(HomeFragment())
+                R.id.about -> replaceFragment(AboutFragment())
+                R.id.profile -> replaceFragment(ProfileFragment())
+                // 2. Tambahkan menu More di sini sesuai ID di menu XML kamu
+                R.id.more -> replaceFragment(MoreFragment())
+            }
+            true
         }
+    }
 
-        // 3. Tombol Logout (Materi P6 - SharedPref)
-        binding.btnMenuLogout.setOnClickListener {
-            MaterialAlertDialogBuilder(this)
-                .setTitle("Konfirmasi Logout")
-                .setMessage("Apakah adek yakin ingin keluar dari SIGANA?")
-                .setPositiveButton("Iya") { _, _ ->
-                    sharedPref.edit {
-                        clear()
-                        apply()
-                    }
-                    val intent = Intent(this, ThirdActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
-                    finish()
-                }
-                .setNegativeButton("Tidak", null)
-                .show()
-        }
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
     }
 }

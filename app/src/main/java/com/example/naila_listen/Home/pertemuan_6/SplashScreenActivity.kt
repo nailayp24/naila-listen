@@ -2,35 +2,25 @@ package com.example.naila_listen.Home.pertemuan_6
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
-import com.example.naila_listen.BaseActivity
-import com.example.naila_listen.MainActivity
-import com.example.naila_listen.R
 import com.example.naila_listen.Home.pertemuan_3.ThirdActivity
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.example.naila_listen.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySplashScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        binding = ActivitySplashScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        // Ambil data shared preferences
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
-        val isLogin = sharedPref.getBoolean("isLogin", false)
-
-        lifecycleScope.launch {
-            delay(2000) // Delay splash screen 2 detik
-
-            // Alur: Jika sudah login ke Main, jika belum ke Auth (ThirdActivity)
-            val intent = if (isLogin) {
-                Intent(this@SplashScreenActivity, BaseActivity::class.java)
-            } else {
-                Intent(this@SplashScreenActivity, ThirdActivity::class.java)
-            }
+        // Splash screen 3 detik langsung mengunci tujuan ke halaman Login (ThirdActivity)
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)
             finish()
-        }
+        }, 3000)
     }
 }

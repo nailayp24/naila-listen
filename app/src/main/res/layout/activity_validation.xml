@@ -24,6 +24,7 @@
         android:layout_height="55dp"
         android:text="SUBMIT &amp; VALIDASI DATA"
         android:backgroundTint="#2E7D32"
+        android:fontFamily="@font/inter_bold"
         app:cornerRadius="12dp"
         android:layout_marginBottom="16dp"/>
 
@@ -33,9 +34,10 @@
         android:layout_height="55dp"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:text="KEMBALI KE REGISTRASI"
-        android:textColor="#E53935"
-        app:strokeColor="#E53935"
+        android:textColor="#D32F2F"
+        app:strokeColor="#D32F2F"
         app:cornerRadius="12dp"
+        android:fontFamily="@font/inter_bold"
         android:visibility="gone"/>
 
 </LinearLayout>

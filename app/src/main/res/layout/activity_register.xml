@@ -22,7 +22,7 @@
                 android:text="Registrasi Akun Relawan"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#E53935"
+                android:textColor="#D32F2F"
                 android:layout_marginBottom="24dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -30,11 +30,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Lengkap"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxStrokeColor="#D32F2F"
+                app:hintTextColor="#D32F2F"
+                app:startIconDrawable="@android:drawable/ic_menu_search"
+                app:startIconTint="#D32F2F"
                 android:layout_marginBottom="12dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etRegNama"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -42,6 +51,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxStrokeColor="#D32F2F"
+                app:hintTextColor="#D32F2F"
+                app:startIconDrawable="@android:drawable/sym_action_email"
+                app:startIconTint="#D32F2F"
                 android:layout_marginBottom="16dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etRegEmail"
@@ -55,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tanggal Lahir:"
                 android:textStyle="bold"
+                android:textColor="#333333"
                 android:layout_marginBottom="4dp"/>
             <DatePicker
                 android:id="@+id/datePickerReg"
@@ -69,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:text="Jenis Kelamin:"
                 android:textStyle="bold"
+                android:textColor="#333333"
                 android:layout_marginBottom="4dp"/>
             <RadioGroup
                 android:id="@+id/rgGender"
@@ -94,6 +113,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxStrokeColor="#D32F2F"
+                app:hintTextColor="#D32F2F"
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
+                app:startIconTint="#D32F2F"
                 android:layout_marginBottom="12dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etRegUsername"
@@ -107,6 +134,15 @@
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#666666"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxStrokeColor="#D32F2F"
+                app:hintTextColor="#D32F2F"
+                app:startIconDrawable="@android:drawable/ic_lock_lock"
+                app:startIconTint="#D32F2F"
                 android:layout_marginBottom="12dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etRegPassword"
@@ -121,6 +157,15 @@
                 android:layout_height="wrap_content"
                 android:hint="Konfirmasi Password"
                 app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#666666"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxStrokeColor="#D32F2F"
+                app:hintTextColor="#D32F2F"
+                app:startIconDrawable="@android:drawable/ic_lock_lock"
+                app:startIconTint="#D32F2F"
                 android:layout_marginBottom="24dp">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etRegConfirmPassword"
@@ -134,7 +179,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="Selanjutnya"
-                android:backgroundTint="#E53935"
+                android:backgroundTint="#D32F2F"
+                android:fontFamily="@font/inter_bold"
                 app:cornerRadius="12dp" />
 
         </LinearLayout>

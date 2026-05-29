@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.naila_listen"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.naila_listen"
@@ -45,6 +41,16 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // === INTEGRASI LENGKAP PERTEMUAN 10 & 11 (BERSIH DARI DOTSINDICATOR) ===
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.kotlinx.coroutines.android)
+
+    // === TESTING LIBRARIES ===
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

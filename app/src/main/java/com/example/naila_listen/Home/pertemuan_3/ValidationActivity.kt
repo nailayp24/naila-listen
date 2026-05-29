@@ -17,6 +17,7 @@ class ValidationActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSubmitValidation.setOnClickListener {
+            // Mengambil data penampung dari register_pref
             val sharedPref = getSharedPreferences("register_pref", Context.MODE_PRIVATE)
             val nama = sharedPref.getString("nama", "") ?: ""
             val email = sharedPref.getString("email", "") ?: ""
@@ -26,20 +27,26 @@ class ValidationActivity : AppCompatActivity() {
             val password = sharedPref.getString("password", "") ?: ""
             val confirmPassword = sharedPref.getString("confirm_password", "") ?: ""
 
+            // Cek apakah ada field yang kosong kosong
             if (nama.isEmpty() || email.isEmpty() || tglLahir.isEmpty() ||
                 gender.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
 
                 Toast.makeText(this, "Validasi Gagal: Semua data wajib diisi!", Toast.LENGTH_SHORT).show()
+
+                // CUKUP PAKAI BARIS INI SAJA (Baris PIVOT_X_IN_DEGREES tadi dihapus saja)
                 binding.btnKembali.visibility = View.VISIBLE
+
                 return@setOnClickListener
             }
 
+            // Validasi kecocokan sandi
             if (password != confirmPassword) {
                 Toast.makeText(this, "Validasi Gagal: Password tidak cocok!", Toast.LENGTH_SHORT).show()
                 binding.btnKembali.visibility = View.VISIBLE
                 return@setOnClickListener
             }
 
+            // Jika sukses, simpan kredensial utama ke user_pref untuk login
             val loginPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
             val loginEditor = loginPref.edit()
             loginEditor.putString("saved_username", username)
@@ -48,14 +55,15 @@ class ValidationActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Validasi Berhasil! Akun siap digunakan.", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, ThirdActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            // FIX AMAN: Dialihkan langsung menuju halaman sukses ThirdResultActivity setelah register berhasil
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }
 
         binding.btnKembali.setOnClickListener {
-            finish()
+            finish() // Menutup halaman validasi dan kembali ke borang registrasi
         }
     }
 }

@@ -17,23 +17,29 @@ class ThirdActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnKirim.setOnClickListener {
-            val username = binding.etUsername.text.toString()
-            val pass = binding.etPassword.text.toString()
+            val username = binding.etUsername.text.toString().trim()
+            val pass = binding.etPassword.text.toString().trim()
 
+            // Mengambil kredensial akun yang baru divalidasi dari ValidationActivity
             val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
             val registeredUser = sharedPref.getString("saved_username", "")
             val registeredPass = sharedPref.getString("saved_password", "")
 
-            // Pengecekan multi-kondisi login
-            if (username == pass && username.isNotEmpty()) {
+            // Pengecekan multi-kondisi login secara presisi
+            if (username.isEmpty() || pass.isEmpty()) {
+                Toast.makeText(this, "Nama Pengguna dan Kata Sandi tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+            } else if (username == pass) {
+                // Kondisi bypass mode development (jika username & password diisi sama)
                 goToDashboard()
-            } else if (username == registeredUser && pass == registeredPass && username.isNotEmpty()) {
+            } else if (username == registeredUser && pass == registeredPass) {
+                // Kondisi login menggunakan akun relawan yang baru didaftarkan
                 goToDashboard()
             } else {
                 Toast.makeText(this, "Username atau Password salah!", Toast.LENGTH_SHORT).show()
             }
         }
 
+        // Navigasi beralih ke halaman pendaftaran relawan baru
         binding.btnToRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
@@ -41,6 +47,8 @@ class ThirdActivity : AppCompatActivity() {
 
     private fun goToDashboard() {
         Toast.makeText(this, "Login Berhasil, Selamat Bertugas!", Toast.LENGTH_SHORT).show()
+
+        // Membuka Dashboard Utama SIGANA dan membersihkan tumpukan halaman lama
         val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)

@@ -22,18 +22,21 @@ class RegisterActivity : AppCompatActivity() {
             val password = binding.etRegPassword.text.toString()
             val confirmPassword = binding.etRegConfirmPassword.text.toString()
 
+            // Mengambil data dari DatePicker
             val day = binding.datePickerReg.dayOfMonth
             val month = binding.datePickerReg.month + 1
             val year = binding.datePickerReg.year
             val tanggalLahir = "$day-$month-$year"
 
+            // FIX BENAR: Menggunakan binding.root untuk mencari RadioButton yang terpilih secara aman
             val selectedGenderId = binding.rgGender.checkedRadioButtonId
             val gender = if (selectedGenderId != -1) {
-                findViewById<RadioButton>(selectedGenderId).text.toString()
+                binding.root.findViewById<RadioButton>(selectedGenderId).text.toString()
             } else {
                 ""
             }
 
+            // Menyimpan ke SharedPreferences untuk proses Validasi
             val sharedPref = getSharedPreferences("register_pref", Context.MODE_PRIVATE)
             val editor = sharedPref.edit()
             editor.putString("nama", nama)
@@ -45,6 +48,7 @@ class RegisterActivity : AppCompatActivity() {
             editor.putString("confirm_password", confirmPassword)
             editor.apply()
 
+            // Berpindah ke Halaman Validasi Data
             startActivity(Intent(this, ValidationActivity::class.java))
         }
     }

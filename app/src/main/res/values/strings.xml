@@ -1,18 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">naila-listen</string>
+    <string name="app_name">SIGANA</string>
 
-    <string name="welcome_title">Welcome Back 👋</string>
-    <string name="login_desc">Today is a new day. It\'s your day. You shape it. Sign in to start managing your projects.</string>
-    <string name="label_username">Username</string>
-    <string name="label_password">Password</string>
-    <string name="hint_username">Input your username</string>
-    <string name="hint_password">At least 8 characters</string>
-    <string name="btn_login">Sign in</string>
-    <string name="or_sign_in">Or sign in with</string>
-    <string name="no_account">Don\'t have an account? Sign up</string>
+    <string name="welcome_title">Portal Utama SIGANA</string>
+    <string name="login_desc">Silakan masuk untuk mengakses pusat koordinasi posko darurat, manajemen logistik, dan pemantauan data live BMKG.</string>
+    <string name="label_username">Nama Pengguna / Email</string>
+    <string name="label_password">Kata Sandi</string>
+    <string name="hint_username">Masukkan username atau email Anda</string>
+    <string name="hint_password">Minimal 8 karakter</string>
+    <string name="btn_login">Masuk Aplikasi</string>
+    <string name="or_sign_in">Atau masuk menggunakan</string>
+    <string name="no_account">Belum punya akun? Daftar Sekarang</string>
 
-    <string name="login_success">Login Berhasil! 🎉</string>
-    <string name="success_desc">Selamat datang kembali di naila-listen. Kamu sudah bisa mulai mengelola project kamu sekarang.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_success">Akses Diterima! 🎉</string>
+    <string name="success_desc">Selamat datang kembali di sistem SIGANA. Sinyal koordinasi dan pemantauan bencana telah aktif.</string>
+
+    <string name="hello_blank_fragment">Memuat data halaman...</string>
 </resources>

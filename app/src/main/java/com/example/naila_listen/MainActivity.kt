@@ -6,7 +6,8 @@ import androidx.fragment.app.Fragment
 import com.example.naila_listen.Home.HomeFragment
 import com.example.naila_listen.About.AboutFragment
 import com.example.naila_listen.Profile.ProfileFragment
-import com.example.naila_listen.More.MoreFragment // 1. Tambahkan import ini
+import com.example.naila_listen.Note.FragmentLaporan   // Import Menu Room 1 (Laporan Bencana)
+import com.example.naila_listen.Note.FragmentLogistik  // Import Menu Room 2 (Logistik Bantuan)
 import com.example.naila_listen.databinding.ActivityBaseBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,8 +27,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.about -> replaceFragment(AboutFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
-                // 2. Tambahkan menu More di sini sesuai ID di menu XML kamu
-                R.id.more -> replaceFragment(MoreFragment())
+
+                // MENU ROOM 1: Mengarah ke Laporan Bencana
+                R.id.more -> replaceFragment(FragmentLaporan())
+
+                // MENU ROOM 2: Mengarah ke Logistik Bantuan (Eror merah FragmentNote beres!)
+                R.id.note -> replaceFragment(FragmentLogistik())
             }
             true
         }

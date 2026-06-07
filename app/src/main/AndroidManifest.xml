@@ -16,7 +16,22 @@
         tools:targetApi="m">
 
         <activity
-            android:name="com.example.naila_listen.Home.pertemuan_6.SplashScreenActivity"
+            android:name=".Note.NoteFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+
+        <activity
+            android:name=".Note.LaporanFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+
+        <activity
+            android:name=".Note.LogistikFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+
+        <activity
+            android:name=".Home.pertemuan_6.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,20 +39,39 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.naila_listen.Home.onboarding.OnboardingActivity" android:exported="false" />
-
-        <activity android:name="com.example.naila_listen.Home.pertemuan_3.ThirdActivity" android:exported="false" />
-        <activity android:name="com.example.naila_listen.Home.pertemuan_3.RegisterActivity" android:exported="false" />
-        <activity android:name="com.example.naila_listen.Home.pertemuan_3.ValidationActivity" android:exported="false" />
-        <activity android:name="com.example.naila_listen.Home.pertemuan_3.ThirdResultActivity" android:exported="false" />
-
-        <activity android:name="com.example.naila_listen.Home.pertemuan_2.SecondActivity" android:exported="false" />
-        <activity android:name="com.example.naila_listen.Home.pertemuan_4.CustomSatuActivity" android:exported="false" />
-        <activity android:name="com.example.naila_listen.Home.pertemuan_6.WebViewActivity" android:exported="false" />
-        <activity android:name="com.example.naila_listen.Home.EighthActivity" android:exported="false" />
-        <activity android:name="com.example.naila_listen.Home.pertemuan_10.TenthActivity" android:exported="false" />
-
-        <activity android:name="com.example.naila_listen.MainActivity" android:exported="false" />
-
+        <activity
+            android:name=".Home.onboarding.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_3.ThirdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_3.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_3.ValidationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_3.ThirdResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_2.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_4.CustomSatuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_6.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.EighthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_10.TenthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
+
 </manifest>

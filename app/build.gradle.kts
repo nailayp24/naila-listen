@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -44,18 +45,22 @@ dependencies {
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    // === INTEGRASI LENGKAP PERTEMUAN 10 & 11 (BERSIH DARI DOTSINDICATOR) ===
-    implementation(libs.androidx.recyclerview)
+    // === INTEGRASI REST API (RETROFIT & COROUTINES) ===
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.converter.gson)
     implementation(libs.kotlinx.coroutines.android)
+
+    // === INTEGRASI PENYIMPANAN LOKAL ROOM DATABASE ===
+    val room_version = "2.7.0-alpha12"
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
+
+    // === UI COMPONENTS ===
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
     // === TESTING LIBRARIES ===
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("androidx.gridlayout:gridlayout:1.0.0")
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
-
 }

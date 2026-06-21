@@ -18,8 +18,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 🌟 CEK APAKAH DIBUKA LEWAT NOTIFIKASI REMINDER LOGISTIK 🌟
         if (savedInstanceState == null) {
-            replaceFragment(HomeFragment())
+            val openFragment = intent.getStringExtra("OPEN_FRAGMENT")
+            if (openFragment == "LAPORAN") {
+                replaceFragment(FragmentLaporan())
+            } else if (openFragment == "LOGISTIK" || intent.hasExtra("target_activity")) {
+                replaceFragment(FragmentLogistik()) // Langsung lompat ke halaman Logistik yang relevan
+            } else {
+                replaceFragment(HomeFragment())
+            }
         }
 
         binding.bottomNavView.setOnItemSelectedListener { item ->
@@ -27,11 +35,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.about -> replaceFragment(AboutFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
-
-                // MENU ROOM 1: Mengarah ke Laporan Bencana
                 R.id.more -> replaceFragment(FragmentLaporan())
-
-                // MENU ROOM 2: Mengarah ke Logistik Bantuan (Eror merah FragmentNote beres!)
                 R.id.note -> replaceFragment(FragmentLogistik())
             }
             true

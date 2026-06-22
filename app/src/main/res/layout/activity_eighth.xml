@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email Pelapor"
-                app:startIconDrawable="@drawable/ic_edit"
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
                 app:boxStrokeColor="#E53935">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEmail"
@@ -53,10 +53,14 @@
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip1"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Waspada" />
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip2"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Darurat" />
             </com.google.android.material.chip.ChipGroup>
 
@@ -68,10 +72,14 @@
                 app:useDefaultMargins="true">
                 <com.google.android.material.button.MaterialButton
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:text="Data Warga"
                     app:layout_columnWeight="1" />
                 <com.google.android.material.button.MaterialButton
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:text="Posko"
                     app:layout_columnWeight="1" />
             </androidx.gridlayout.widget.GridLayout>

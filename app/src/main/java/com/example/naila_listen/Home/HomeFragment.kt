@@ -19,8 +19,8 @@ import com.example.naila_listen.data.model.EarthquakeResponse
 import com.example.naila_listen.data.model.EarthquakeListResponse
 
 // --- IMPORT ADAPTER KONTEN ---
-import com.example.naila_listen.Home.NewsAdapter // Mengimpor NewsAdapter agar tidak Unresolved Reference
-import com.example.naila_listen.Home.pertemuan_10.HomeTabsAdapter // Jalur folder P10 yang valid
+import com.example.naila_listen.Home.NewsAdapter
+import com.example.naila_listen.Home.pertemuan_10.HomeTabsAdapter
 
 // --- IMPORT INTEGRASI NAVIGASI PERTEMUAN ---
 import com.example.naila_listen.Home.pertemuan_2.SecondActivity
@@ -28,6 +28,7 @@ import com.example.naila_listen.Home.pertemuan_3.ThirdActivity
 import com.example.naila_listen.Home.pertemuan_4.CustomSatuActivity
 import com.example.naila_listen.Home.pertemuan_6.WebViewActivity
 import com.example.naila_listen.Home.EighthActivity
+import com.example.naila_listen.Home.feature_camera_qr.ThirteenthActivity // Alamat package kustom baru!
 
 // --- IMPORT UI COMPONENTS & MATERIAL DESIGN ---
 import com.example.naila_listen.databinding.FragmentHomeBinding
@@ -83,6 +84,12 @@ class HomeFragment : Fragment() {
 
         binding.btnPertemuan8.setOnClickListener {
             startActivity(Intent(requireContext(), EighthActivity::class.java))
+        }
+
+        // 🌟 SAMBUNGAN KLIK BARU KE MANAJEMEN FOTO & SCAN QR 🌟
+        binding.btnPertemuan13.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
+            startActivity(intent)
         }
 
         // === SETUP RECYCLERVIEW DAFTAR BERITA BENCANA ===
@@ -154,7 +161,6 @@ class HomeFragment : Fragment() {
             // JALUR 2: Load Daftar Berita Gempa Berkala (RecyclerView)
             try {
                 val responseList = BinaDesaApiClient.apiService.getEarthquakeList()
-                // FIXED SINKRON: memanggil infoGempaList dari data EarthquakeListResponse yang baru
                 val listData = responseList.infoGempaList.listGempa
 
                 if (listData != null) {

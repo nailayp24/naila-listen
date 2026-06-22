@@ -133,63 +133,77 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnCount="2"
+                android:columnCount="3"
                 android:alignmentMode="alignMargins"
                 android:layout_marginBottom="16dp">
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPertemuan2"
                     android:layout_width="0dp"
-                    android:layout_height="130dp"
+                    android:layout_height="110dp"
                     android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@android:drawable/ic_menu_edit" app:tint="#F57C00" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kalkulator" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_edit" app:tint="#F57C00" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kalkulator" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="6dp"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPertemuan3"
                     android:layout_width="0dp"
-                    android:layout_height="130dp"
+                    android:layout_height="110dp"
                     android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@android:drawable/ic_lock_lock" app:tint="#F57C00" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_lock_lock" app:tint="#F57C00" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="6dp"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPertemuan4"
                     android:layout_width="0dp"
-                    android:layout_height="130dp"
+                    android:layout_height="110dp"
                     android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@android:drawable/ic_menu_gallery" app:tint="#F57C00" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Custom" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_gallery" app:tint="#F57C00" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Custom" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="6dp"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPertemuan6"
                     android:layout_width="0dp"
-                    android:layout_height="130dp"
+                    android:layout_height="110dp"
                     android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@android:drawable/ic_menu_mapmode" app:tint="#F57C00" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web Desa" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_mapmode" app:tint="#F57C00" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web Desa" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnPertemuan13"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_camera" app:tint="#F57C00" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kamera &amp; QR" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="6dp"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 

@@ -9,6 +9,10 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
 
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,9 +23,24 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
         <receiver
             android:name=".utils.ReminderReceiver"
             android:exported="false"/>
+
+        <activity
+            android:name=".Home.feature_camera_qr.ThirteenthActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
 
         <activity
             android:name=".Note.NoteFormActivity"
@@ -47,39 +66,17 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".Home.onboarding.OnboardingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.pertemuan_3.ThirdActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.pertemuan_3.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.pertemuan_3.ValidationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.pertemuan_3.ThirdResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.pertemuan_2.SecondActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.pertemuan_4.CustomSatuActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.pertemuan_6.WebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.EighthActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Home.pertemuan_10.TenthActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+        <activity android:name=".Home.onboarding.OnboardingActivity" android:exported="false" />
+        <activity android:name=".Home.pertemuan_3.ThirdActivity" android:exported="false" />
+        <activity android:name=".Home.pertemuan_3.RegisterActivity" android:exported="false" />
+        <activity android:name=".Home.pertemuan_3.ValidationActivity" android:exported="false" />
+        <activity android:name=".Home.pertemuan_3.ThirdResultActivity" android:exported="false" />
+        <activity android:name=".Home.pertemuan_2.SecondActivity" android:exported="false" />
+        <activity android:name=".Home.pertemuan_4.CustomSatuActivity" android:exported="false" />
+        <activity android:name=".Home.pertemuan_6.WebViewActivity" android:exported="false" />
+        <activity android:name=".Home.EighthActivity" android:exported="false" />
+        <activity android:name=".Home.pertemuan_10.TenthActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="false" />
     </application>
 
 </manifest>
